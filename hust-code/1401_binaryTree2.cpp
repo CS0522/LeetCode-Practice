@@ -61,6 +61,7 @@ Node* buildBinaryTree(Node *root, string preOrder, string inOrder)
     }
     // set root node 
     root->c = preOrder[0];
+    // 返回下标
     int rootIndex = inOrder.find(preOrder[0]);
     string lPreOrder = preOrder.substr(1, rootIndex);
     string rPreOrder = preOrder.substr(1 + rootIndex, preOrder.length() - 1 - rootIndex);
